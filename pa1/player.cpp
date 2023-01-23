@@ -37,8 +37,8 @@ private:
 
 playerClass::playerClass()
 {
-    FirstName = "uknown";
-    LastName = "uknown";
+    FirstName = "unknown";
+    LastName = "unknown";
     Matches = 0;
     Runs = 0;
     Balls = 0;
