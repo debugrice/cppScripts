@@ -42,8 +42,19 @@ int main()
 	    cin.ignore(100, '\n');
         
         
-        cout << "Do you wish to test another [yes/no]? ";
+        cout << "Do you wish to test another [yes/no]? " << endl;
         cin >> testSelector;
+
+        while (testSelector!= "yes" && testSelector!= "no")
+        {
+            cout << "Error, Please enter a valid response." << endl;
+            cout << "Do you wish to test another [yes/no]? " << endl;
+            cin >> testSelector;
+        }
+
+        cin.clear();
+	    cin.ignore(100, '\n');
+         
     }
 
 
