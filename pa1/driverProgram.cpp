@@ -20,12 +20,12 @@ int main()
         cout << "FirstName LastName Matches Runs Balls NotOuts" << endl;
         // cout << "Enter Player Data: ";
         cin >> FN >> LN >> matches >> runs >> balls >> notouts;
-        cout << "FN: " << FN << endl;
-        cout << "LN: " << LN << endl;
-        cout << "matches: " << matches << endl;
-        cout << "runs: " << runs << endl;
-        cout << "balls: " << balls << endl;
-        cout << "notouts: " << notouts << endl;
+        // cout << "FN: " << FN << endl;
+        // cout << "LN: " << LN << endl;
+        // cout << "matches: " << matches << endl;
+        // cout << "runs: " << runs << endl;
+        // cout << "balls: " << balls << endl;
+        // cout << "notouts: " << notouts << endl;
 
 
         newPlayer.setFirstName(FN);
@@ -56,6 +56,8 @@ int main()
 	    cin.ignore(100, '\n');
          
     }
+
+    cout << "Program 1 is completed." << endl;
 
 
     return 0;

@@ -111,16 +111,21 @@ void playerClass::setNotOuts(int newNotOuts)
 
 int playerClass::calcDismissals()
 {
+    cout << "Matches: " << Matches << endl;
+    cout << "NotOUts: " << NotOuts << endl;
     return (Matches - NotOuts);
 }
 
 int playerClass::calcBattingAverage()
 {
+    cout << "Runs:" << Runs << endl;
     return (Runs/calcDismissals());
 }
 
 int playerClass::calcBattingStrikeRate()
 {
+    cout << "Runs: " << Runs << endl;
+    cout << "Balls: " << Balls << endl;
     return (Runs/Balls)*100;
 }
 
