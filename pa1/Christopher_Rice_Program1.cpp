@@ -1,7 +1,9 @@
 // Christopher Rice
 // 1/24/23
 // VS Code Compiler: g++.exe (MinGW.org GCC-6.3.0-1) 6.3.0
-
+// Course Section: CS 221-01
+// The following program takes a user prompt of firstname lastname matches runs balls notouts and
+// produces a calculation on these inputs using class member methods.
 
 #include "player.h"
 
