@@ -3,7 +3,7 @@
 // VS Code Compiler: g++.exe (MinGW.org GCC-6.3.0-1) 6.3.0
 
 
-#include "player.cpp"
+#include "player.h"
 
 int main()
 {
