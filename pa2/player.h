@@ -5,18 +5,18 @@ using namespace std;
 // player Class Definition
 class player {
 public:
-    std::string name;
+    string name;
     int score;
 
-    // constructor
-    player(std::string n, int s) : name(n), score(s) {}
-// Public Member Functions Definitions
-
-// player Constructor
+    // player Constructor
     player();
 
+    // player Constructor
+    player(string newFirstName, string newLastName, float newMatches, float newRuns, float newBalls, float newNotOuts);
 
-// player get functions
+    // Public Member Functions Definitions
+
+    // player get functions
     string getFirstName();
     string getLastName();
     float getMatches();
@@ -24,7 +24,7 @@ public:
     float getBalls();
     float getNotOuts();
 
-// player set functions
+    // player set functions
     string setFirstName(string newFirstName);
     string setLastName(string newLastName);
     void setMatches(float newMatches);
@@ -32,7 +32,7 @@ public:
     void setBalls(float newBalls);
     void setNotOuts(float newNotOuts);
 
-// These functions are used to calculate stats of the player
+    // These functions are used to calculate stats of the player
     float calcDismissals();
     float calcBattingAverage();
     float calcBattingStrikeRate();
@@ -61,6 +61,16 @@ player::player()
     NotOuts = 0;
 
 
+}
+
+player::player(string newFirstName, string newLastName, float newMatches, float newRuns, float newBalls, float newNotOuts)
+{
+    FirstName = newFirstName;
+    LastName = newLastName;
+    Matches = newMatches;
+    Runs = newRuns;
+    Balls = newBalls;
+    NotOuts = newNotOuts;
 }
 
 
@@ -109,7 +119,7 @@ string player::setFirstName(string newFirstName)
 // Sets the last name of the player
 string player::setLastName(string newLastName)
 {
-        LastName = newLastName;
+    LastName = newLastName;
 
 }
 

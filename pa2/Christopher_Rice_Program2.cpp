@@ -1,8 +1,12 @@
 #include "playerList.h"
-#define MAX_SIZE 20
 
 int main() {
     playerList list;
+
+    list.addplayer(player("Chris","Rice",10,20,30,40));
+    list.addplayer(player("Elizabeth","Rice",10,20,30,40));
+    list.getNext();
+    list.getNext();
 
     return 0;
 }
