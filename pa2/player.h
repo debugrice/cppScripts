@@ -37,7 +37,6 @@ public:
     float calcBattingAverage();
     float calcBattingStrikeRate();
 
-
 // Private member variables
 private:
     string FirstName;
