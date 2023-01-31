@@ -11,7 +11,7 @@ int main()
 {
 
     // Variable declaration for user input
-    playerClass newPlayer;
+    player newplayer;
     string FN;
     string LN;
     float matches;
@@ -21,7 +21,7 @@ int main()
     string loopController = "yes";
 
     // User prompt
-    cout << "Welcome to the Cricket Player Stats Program." << endl;
+    cout << "Welcome to the Cricket player Stats Program." << endl;
     cout << "When prompted, please enter the player's data in the form of" << endl;
     cout << "FirstName LastName Matches Runs Balls NotOuts" << endl;
 
@@ -31,21 +31,21 @@ int main()
     {
 
         // User prompt
-        cout << "Enter Player Data: ";
+        cout << "Enter player Data: ";
         cin >> FN >> LN >> matches >> runs >> balls >> notouts;
 
 
         // Setting player member variables to user input
-        newPlayer.setFirstName(FN);
-        newPlayer.setLastName(LN);
-        newPlayer.setMatches(matches);
-        newPlayer.setRuns(runs);
-        newPlayer.setBalls(balls);
-        newPlayer.setNotOuts(notouts);
+        newplayer.setFirstName(FN);
+        newplayer.setLastName(LN);
+        newplayer.setMatches(matches);
+        newplayer.setRuns(runs);
+        newplayer.setBalls(balls);
+        newplayer.setNotOuts(notouts);
 
-        // The following line outputs Player name along with Dismissals, Batting Strike Average and Batting Strike Rate
+        // The following line outputs player name along with Dismissals, Batting Strike Average and Batting Strike Rate
         // which is calculated inside player class
-        cout << newPlayer.getFirstName() << " " <<  newPlayer.getLastName() <<  " - Dismissals: "<<  newPlayer.calcDismissals() <<  " Batting Strike Rate: " <<  newPlayer.calcBattingStrikeRate()<<  " Batting Average: " <<  newPlayer.calcBattingAverage() << endl;
+        cout << newplayer.getFirstName() << " " <<  newplayer.getLastName() <<  " - Dismissals: "<<  newplayer.calcDismissals() <<  " Batting Strike Rate: " <<  newplayer.calcBattingStrikeRate()<<  " Batting Average: " <<  newplayer.calcBattingAverage() << endl;
 
         // To remove any leftover garbage that may exist inside of the cin input stream
         cin.clear();

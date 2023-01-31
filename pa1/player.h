@@ -2,17 +2,17 @@
 using namespace std;
 
 
-// Player Class Definition
-class playerClass {
+// player Class Definition
+class player {
 public:
 
 // Public Member Functions Definitions
 
-// Player Constructor
-    playerClass();
+// player Constructor
+    player();
 
 
-// Player get functions
+// player get functions
     string getFirstName();
     string getLastName();
     float getMatches();
@@ -20,7 +20,7 @@ public:
     float getBalls();
     float getNotOuts();
 
-// Player set functions
+// player set functions
     string setFirstName(string newFirstName);
     string setLastName(string newLastName);
     void setMatches(float newMatches);
@@ -42,12 +42,12 @@ private:
     float Runs;
     float Balls;
     float NotOuts;
-    float Playerarr[4] = {Matches, Runs, Balls, NotOuts};
+    float playerarr[4] = {Matches, Runs, Balls, NotOuts};
 };
 
 
 // Constructors method which initializes class variables
-playerClass::playerClass()
+player::player()
 {
     FirstName = "unknown";
     LastName = "unknown";
@@ -61,93 +61,93 @@ playerClass::playerClass()
 
 
 // Returns the player's first name 
-string playerClass::getFirstName()
+string player::getFirstName()
 {
     return FirstName;
 }
 
 // Returns the player's last name 
-string playerClass::getLastName()
+string player::getLastName()
 {
     return LastName;
 }
 
 // Returns the player's matches
-float playerClass::getMatches()
+float player::getMatches()
 {
     return Matches;
 }
 
 // Returns the player's runs
-float playerClass::getRuns()
+float player::getRuns()
 {
     return Runs;
 }
 
 // Returns the player's balls
-float playerClass::getBalls()
+float player::getBalls()
 {
     return Balls;
 }
 
 // Returns the player's not outs
-float playerClass::getNotOuts()
+float player::getNotOuts()
 {
     return NotOuts;
 }
 
 // Sets the first name of the player
-string playerClass::setFirstName(string newFirstName)
+string player::setFirstName(string newFirstName)
 {
     FirstName = newFirstName;
 }
 
 // Sets the last name of the player
-string playerClass::setLastName(string newLastName)
+string player::setLastName(string newLastName)
 {
         LastName = newLastName;
 
 }
 
 // Sets the matches of the player
-void playerClass::setMatches(float newMatches)
+void player::setMatches(float newMatches)
 {
     Matches = newMatches;
 }
 
 // Sets the runs of the player
-void playerClass::setRuns(float newRuns)
+void player::setRuns(float newRuns)
 {
     Runs = newRuns;
 }
 
 // Sets the balls of the player
-void playerClass::setBalls(float newBalls)
+void player::setBalls(float newBalls)
 {
     Balls = newBalls;
 }
 
 // Sets the not outs of the player
-void playerClass::setNotOuts(float newNotOuts)
+void player::setNotOuts(float newNotOuts)
 {
     NotOuts = newNotOuts;
 }
 
 // The following member function calculates the dismissals of the player
-float playerClass::calcDismissals()
+float player::calcDismissals()
 {
 
     return (Matches - NotOuts);
 }
 
 // The following member function calculates the batting average of the player
-float playerClass::calcBattingAverage()
+float player::calcBattingAverage()
 {
     return (Runs/calcDismissals());
 }
 
 // The following member function calculates the batting strike rate of the player
-float playerClass::calcBattingStrikeRate()
+float player::calcBattingStrikeRate()
 {
     return (Runs/Balls)*100;
 }
