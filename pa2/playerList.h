@@ -1,21 +1,27 @@
-class PlayerList {
+#include <iostream>
+#include <string>
+#include "player.h"
+#define MAX_SIZE 100
+
+
+class playerList {
 private:
-    Player players[MAX_SIZE];
+    player players[MAX_SIZE];
     int size;
 
 public:
     // default constructor
-    PlayerList() : size(0) {}
+    playerList() : size(0) {}
 
     // add a player to the list
-    void addPlayer(Player p) {
-        if (size < MAX_SIZE) {
+    void addplayer(player p) 
+    {
+        if (size < MAX_SIZE) 
             players[size++] = p;
-        }
     }
 
     // iterate through the list
-    Player& getNext() {
+    player& getNext() {
         static int index = 0;
         if (index < size) {
             return players[index++];
@@ -45,16 +51,3 @@ public:
     }
 };
 
-int main() {
-    PlayerList list;
-    list.addPlayer(Player("Alice", 100));
-    list.addPlayer(Player("Bob", 90));
-    list.addPlayer(Player("Charlie", 80));
-
-    while (list.hasNext()) {
-        Player p = list.getNext();
-        std::cout << p.name << " " << p.score << std::endl;
-    }
-
-    return 0;
-}
