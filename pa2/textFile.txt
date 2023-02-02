@@ -1,0 +1,5 @@
+Chris rice 30 20 10 40 50
+Liz rice 30 20 10 40 50
+Logan rice 30 20 10 40 50
+Eric rice 30 20 10 40 50
+Alan rice 30 20 10 40    

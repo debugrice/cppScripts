@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 #include "player.h"
 #define MAX_CAPACITY 20
 
@@ -12,6 +13,9 @@ private:
 public:
     // default constructor
     playerList();
+
+    // textFile Constructor
+    playerList(string fileName);
     
     // List functions
     void addplayer(player p);
@@ -21,12 +25,32 @@ public:
     bool isFull();
     int getcurrentCapacity();
 
+    // Print functions
+    void printToFile(string fileName);
     void printPlayers();
 
 };
 
 playerList::playerList()
 {
+
+}
+
+playerList::playerList(string fileName)
+{
+    // ifstream inFile(fileName);
+
+    // if (!inFile.is_open())
+    // {
+    //     cout << "Error, file not open." << endl;
+    //     return;
+    // }
+    
+    // string line;
+    // while (getline(inFile, line))
+    // {
+    //     line.find(" ");
+    // }
 
 }
 
@@ -80,7 +104,6 @@ int playerList::getcurrentCapacity() {
     return currentCapacity;
 }
 
-// Given a player P, the following prints their information
 void playerList::printPlayers()
 {
 
@@ -94,5 +117,10 @@ void playerList::printPlayers()
         cout << "Balls: " << players[i].getBalls() << endl;
         cout << "NotOuts: " << players[i].getNotOuts() << endl;
     }
+
+}
+
+void printToFile(string fileName)
+{
 
 }

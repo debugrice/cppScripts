@@ -25,8 +25,8 @@ public:
     float getNotOuts();
 
     // player set functions
-    string setFirstName(string newFirstName);
-    string setLastName(string newLastName);
+    void setFirstName(string newFirstName);
+    void setLastName(string newLastName);
     void setMatches(float newMatches);
     void setRuns(float newRuns);
     void setBalls(float newBalls);
@@ -37,6 +37,9 @@ public:
     float calcBattingAverage();
     float calcBattingStrikeRate();
 
+    void printPlayers();
+
+
 // Private member variables
 private:
     string FirstName;
@@ -45,7 +48,6 @@ private:
     float Runs;
     float Balls;
     float NotOuts;
-    float playerarr[4] = {Matches, Runs, Balls, NotOuts};
 };
 
 
@@ -110,13 +112,13 @@ float player::getNotOuts()
 }
 
 // Sets the first name of the player
-string player::setFirstName(string newFirstName)
+void player::setFirstName(string newFirstName)
 {
     FirstName = newFirstName;
 }
 
 // Sets the last name of the player
-string player::setLastName(string newLastName)
+void player::setLastName(string newLastName)
 {
     LastName = newLastName;
 
@@ -163,4 +165,14 @@ float player::calcBattingAverage()
 float player::calcBattingStrikeRate()
 {
     return (Runs/Balls)*100;
+}
+
+void player::printPlayers()
+{
+    cout << "First Name: " << getFirstName()<< endl;
+    cout << "Last Name: " << getLastName()<< endl;
+    cout << "Matches: " << getMatches() << endl;
+    cout << "Runs: " << getRuns() << endl;
+    cout << "Balls: " << getBalls() << endl;
+    cout << "NotOuts: " << getNotOuts() << endl;
 }
